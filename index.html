@@ -1,11 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mon Portfolio - Développeur Web</title>
+    <!-- Tailwind CSS CDN pour un style rapide et responsive -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Configuration de la police Inter pour l'ensemble du document */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Styles personnalisés pour les dégradés de fond */
+        .bg-gradient-blue-black {
+            background: linear-gradient(135deg, #0A0A0A 0%, #000000 50%, #0A0A0A 100%);
+        }
+        .bg-gradient-dark-blue {
+            background: linear-gradient(135deg, #1a202c 0%, #2a3342 100%); /* Nuances de bleu foncé pour les cartes */
+        }
+        /* Animation pour les icônes de compétences */
+        .skill-icon {
+            transition: transform 0.3s ease-in-out;
+        }
+        .skill-icon:hover {
+            transform: translateY(-5px) scale(1.05);
+        }
+    </style>
 </head>
-<body>
-    Mon site
+<body class="bg-gradient-blue-black text-gray-100 min-h-screen flex flex-col">
+
+    <!-- Section d'en-tête (Header) -->
+    <header class="bg-black bg-opacity-70 py-4 px-6 md:px-12 shadow-lg rounded-b-xl">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Nom/Logo du Portfolio -->
+            <a href="#" class="text-2xl font-bold text-blue-500 hover:text-blue-400 transition duration-300 ease-in-out">
+                Mon Portfolio
+            </a>
+            <!-- Navigation (peut être étendue plus tard) -->
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#competences" class="text-gray-300 hover:text-blue-400 transition duration-300 ease-in-out font-medium">Compétences</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-blue-400 transition duration-300 ease-in-out font-medium">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Section Héro (Hero Section) -->
+    <main class="flex-grow flex items-center justify-center py-16 px-6 md:px-12">
+        <div class="container mx-auto text-center">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6 animate-fade-in-down">
+                Développeur Web Full-Stack
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto animate-fade-in-up">
+                Passionné par la création d'expériences web robustes et intuitives.
+                Expert en développement back-end et front-end pour des solutions performantes.
+            </p>
+            <a href="#competences" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                Découvrir mes compétences
+            </a>
+        </div>
+    </main>
+
+    <!-- Section Compétences (Skills Section) -->
+    <section id="competences" class="py-20 px-6 md:px-12 bg-gray-900 bg-opacity-80 rounded-t-xl shadow-inner">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-blue-500 mb-12">Mes Compétences Techniques</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Carte de compétence: PHP -->
+                <div class="bg-gradient-dark-blue p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
+                    <img src="https://placehold.co/60x60/606060/FFFFFF?text=PHP" alt="PHP Icon" class="skill-icon mx-auto mb-4 rounded-full">
+                    <h3 class="text-2xl font-semibold text-white mb-2">PHP</h3>
+                    <p class="text-gray-300">Maîtrise du langage serveur pour des applications web dynamiques.</p>
+                </div>
+                <!-- Carte de compétence: Laravel -->
+                <div class="bg-gradient-dark-blue p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
+                    <img src="https://placehold.co/60x60/606060/FFFFFF?text=Laravel" alt="Laravel Icon" class="skill-icon mx-auto mb-4 rounded-full">
+                    <h3 class="text-2xl font-semibold text-white mb-2">Laravel</h3>
+                    <p class="text-gray-300">Développement d'applications robustes avec le framework PHP Laravel.</p>
+                </div>
+                <!-- Carte de compétence: HTML -->
+                <div class="bg-gradient-dark-blue p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
+                    <img src="https://placehold.co/60x60/606060/FFFFFF?text=HTML" alt="HTML Icon" class="skill-icon mx-auto mb-4 rounded-full">
+                    <h3 class="text-2xl font-semibold text-white mb-2">HTML</h3>
+                    <p class="text-gray-300">Structure sémantique et accessible pour toutes les pages web.</p>
+                </div>
+                <!-- Carte de compétence: CSS -->
+                <div class="bg-gradient-dark-blue p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
+                    <img src="https://placehold.co/60x60/606060/FFFFFF?text=CSS" alt="CSS Icon" class="skill-icon mx-auto mb-4 rounded-full">
+                    <h3 class="text-2xl font-semibold text-white mb-2">CSS</h3>
+                    <p class="text-gray-300">Stylisation moderne et responsive pour une expérience utilisateur optimale.</p>
+                </div>
+                <!-- Carte de compétence: JavaScript -->
+                <div class="bg-gradient-dark-blue p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
+                    <img src="https://placehold.co/60x60/606060/FFFFFF?text=JS" alt="JavaScript Icon" class="skill-icon mx-auto mb-4 rounded-full">
+                    <h3 class="text-2xl font-semibold text-white mb-2">JavaScript</h3>
+                    <p class="text-gray-300">Interactivité et dynamisme côté client pour des interfaces riches.</p>
+                </div>
+                <!-- Carte de compétence: SQL -->
+                <div class="bg-gradient-dark-blue p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out transform hover:-translate-y-2">
+                    <img src="https://placehold.co/60x60/606060/FFFFFF?text=SQL" alt="SQL Icon" class="skill-icon mx-auto mb-4 rounded-full">
+                    <h3 class="text-2xl font-semibold text-white mb-2">SQL</h3>
+                    <p class="text-gray-300">Gestion et optimisation des bases de données relationnelles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Pied de page (Footer) -->
+    <footer class="bg-black bg-opacity-70 py-8 px-6 md:px-12 mt-auto rounded-t-xl">
+        <div class="container mx-auto text-center text-gray-400">
+            <p>&copy; 2025 Mon Portfolio. Tous droits réservés.</p>
+            <p class="mt-2">Conçu avec passion et code.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
